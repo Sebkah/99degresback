@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "directors",
+  "info": {
+    "name": "director",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nom": {
+      "type": "string"
+    },
+    "descEng": {
+      "type": "string"
+    },
+    "descFr": {
+      "type": "string"
+    },
+    "instaUrl": {
+      "type": "richtext"
+    },
+    "websiteUrl": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "movies": {
+      "via": "directors",
+      "collection": "project",
+      "dominant": true
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}
