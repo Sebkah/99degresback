@@ -16,7 +16,7 @@
       "type": "string",
       "required": true
     },
-    "description": {
+    "descFR": {
       "type": "text"
     },
     "slug": {
@@ -57,8 +57,26 @@
         "mastersmovie",
         "clip",
         "schoolisover",
-        "featured"
+        "featured",
+        "commercial",
+        "court",
+        "developpement"
       ]
+    },
+    "descEN": {
+      "type": "string"
+    },
+    "gifHD": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }
