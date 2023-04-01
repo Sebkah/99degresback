@@ -38,6 +38,27 @@
     "directors": {
       "via": "movies",
       "collection": "director"
+    },
+    "gif": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "tag": {
+      "type": "enumeration",
+      "enum": [
+        "mastersmovie",
+        "clip",
+        "schoolisover",
+        "featured"
+      ]
     }
   }
 }
